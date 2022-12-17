@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.main {
+  min-height: 100vh;
+  display: flex;
+}
+
+#first {
+  flex-basis: 30%;
+  background: url("./images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#first .card-front {
+  height: 220px;
+  width: 400px;
+  border-radius: 10px;
+  background-image: url("./images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  padding: 20px 29px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#first .card-front .card-dets {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: hsl(270deg, 3%, 87%);
+}
+#first .card-front .card-dets .card-number {
+  font-size: 25px;
+  letter-spacing: 2.5px;
+}
+#first .card-front .card-dets .foot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+#first .card-back {
+  height: 220px;
+  width: 400px;
+  border-radius: 10px;
+  background-image: url("./images/bg-card-back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 49%;
+  left: 20%;
+  padding: 15px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#first .card-back .cvc-number {
+  position: absolute;
+  top: 45%;
+  left: 80%;
+  color: hsl(270deg, 3%, 87%);
+}
+
+#second {
+  flex-basis: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#second form {
+  width: 40%;
+  margin: auto;
+  border: 2px solid blue;
+}
+#second form label {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+#second form input {
+  margin-top: 5px;
+  margin-bottom: 18px;
+  width: 100%;
+  font-size: 16px;
+  padding: 7px 10px;
+  border-radius: 5px;
+  border: 1.4px solid rgb(202, 202, 202);
+  outline: none;
+  background: linear-gradient(white, white) padding-box, linear-gradient(to right, hsl(249deg, 99%, 64%), hsl(278deg, 94%, 30%));
+}
+#second form input::placeholder {
+  color: rgb(182, 182, 182);
+}
+#second form input:focus {
+  border-color: transparent;
+}
+#second form .together {
+  display: flex;
+  gap: 15px;
+}
+#second form .together .expiryDateContainer .expiryDateFields {
+  display: flex;
+  gap: 5px;
+}
+#second form #submit-btn {
+  background: hsl(278deg, 68%, 11%);
+  color: hsl(270deg, 3%, 87%);
+  padding: 13px 0;
+  border-radius: 10px;
+  margin-top: 19px;
+}
+
+/*# sourceMappingURL=styles.css.map */
