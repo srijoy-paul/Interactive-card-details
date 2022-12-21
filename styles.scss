@@ -99,10 +99,17 @@ body{
     // border: 2px solid red;
 
     form{
+        // min-height: 378px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
         width: 40%;
         margin: auto;
-        // background: red,blue padding-box;
-        border: 2px solid blue;
+        
+        // border: 2px solid blue;
+        > div{
+            height:77.8px;
+        }
         label{
             font-size: 12px;
             text-transform: uppercase;
@@ -110,7 +117,7 @@ body{
         }
         input{
             margin-top: 5px;
-            margin-bottom: 18px;
+            // margin-bottom: 18px;
             width: 100%;
             // border: 2px solid red;
             font-size: 16px;
@@ -127,23 +134,81 @@ body{
         input:focus{
             border-color: transparent;
         }
+        .errorMSG{
+            margin-top: 5px;
+            color: hsl(0, 100%, 66%);
+            font-size:11px;
+            // border:2px solid blue;
+        }
 
         .together{
             display: flex;
             gap: 15px;
             .expiryDateContainer{
+                flex-basis: 40%;
                 .expiryDateFields{
                     display: flex;
                     gap: 5px;
             }
         }
+        .cvcContainer{
+            flex-basis: 60%;
+        }
     }
-        #submit-btn{
+    #submit-btn{
+    background: hsl(278, 68%, 11%);
+    color: hsl(270, 3%, 87%);
+    padding: 13px 0;
+    border-radius: 10px;
+    margin-top: 15px;
+    }
+}
+
+.thankYou{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: 2px solid blue;
+    width: 40%;
+    gap: 15px;
+    .icon,h1,p{
+        text-align: center;
+        // border:2px solid red;
+    }
+    h1{
+        font-size: 2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-top: 15px;
+    }
+    p{
+        color: hsl(279, 6%, 55%);
+        letter-spacing: 2px;
+    }
+
+    #continue-btn{
         background: hsl(278, 68%, 11%);
         color: hsl(270, 3%, 87%);
         padding: 13px 0;
         border-radius: 10px;
-        margin-top: 19px;
+        margin-top: 15px;
+        width: 100%;
+        margin-top: 30px;
         }
 }
+}
+
+@media(max-width:400px) {
+    .main{
+        // min-height: 100vh;
+        // // border: 2px solid blue;
+        // display:flex;
+        flex-direction: column;
+    }
+    #first{
+        // flex-basis: 30%;
+        background: url('./images/bg-main-mobile.png');
+    }
 }

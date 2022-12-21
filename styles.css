@@ -80,9 +80,14 @@
   align-items: center;
 }
 #second form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 40%;
   margin: auto;
-  border: 2px solid blue;
+}
+#second form > div {
+  height: 77.8px;
 }
 #second form label {
   font-size: 12px;
@@ -90,7 +95,6 @@
 }
 #second form input {
   margin-top: 5px;
-  margin-bottom: 18px;
   width: 100%;
   font-size: 16px;
   padding: 7px 10px;
@@ -105,20 +109,71 @@
 #second form input:focus {
   border-color: transparent;
 }
+#second form .errorMSG {
+  margin-top: 5px;
+  color: hsl(0deg, 100%, 66%);
+  font-size: 11px;
+}
 #second form .together {
   display: flex;
   gap: 15px;
 }
+#second form .together .expiryDateContainer {
+  flex-basis: 40%;
+}
 #second form .together .expiryDateContainer .expiryDateFields {
   display: flex;
   gap: 5px;
+}
+#second form .together .cvcContainer {
+  flex-basis: 60%;
 }
 #second form #submit-btn {
   background: hsl(278deg, 68%, 11%);
   color: hsl(270deg, 3%, 87%);
   padding: 13px 0;
   border-radius: 10px;
-  margin-top: 19px;
+  margin-top: 15px;
+}
+#second .thankYou {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  gap: 15px;
+}
+#second .thankYou .icon, #second .thankYou h1, #second .thankYou p {
+  text-align: center;
+}
+#second .thankYou h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 15px;
+}
+#second .thankYou p {
+  color: hsl(279deg, 6%, 55%);
+  letter-spacing: 2px;
+}
+#second .thankYou #continue-btn {
+  background: hsl(278deg, 68%, 11%);
+  color: hsl(270deg, 3%, 87%);
+  padding: 13px 0;
+  border-radius: 10px;
+  margin-top: 15px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+@media (max-width: 400px) {
+  .main {
+    flex-direction: column;
+  }
+  #first {
+    background: url("./images/bg-main-mobile.png");
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
