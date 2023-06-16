@@ -1,170 +1,168 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-    font-family: 'Space Grotesk', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
 }
 
-body{
-    // border: 2px solid blue;
+body {
+  // border: 2px solid blue;
 }
 
-.main{
-    min-height: 100vh;
-    // border: 2px solid blue;
-    display:flex;
+.main {
+  min-height: 100vh;
+  // border: 2px solid blue;
+  display: flex;
+  // flex-direction: column;
 }
 
-#first{
-    flex-basis: 30%;
-    background: url('./images/bg-main-desktop.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
-    .card-front{
-        height: 220px;
-        width: 400px;
-        // border: 5px solid blue;
-        border-radius:10px;
-        background-image: url('./images/bg-card-front.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: absolute;
-        top: 15%;
-        left: 15%;
-        padding: 20px 29px ;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        
-
-        .card-dets{
-            display: flex;
-            flex-direction: column;
-            // align-items: center;
-            gap: 15px;
-            // border: 2px solid red;
-            color: hsl(270, 3%, 87%);
-            .card-number{
-                font-size: 25px;
-                letter-spacing: 2.5px;
-                // text-align: center;
-            }
-            .foot{
-                // border: 2px solid yellow;
-                display: flex;
-                justify-content: space-between;
-                font-size: 15px;
-                text-transform: uppercase;
-            }
-        }
-    }
-
-    .card-back{
-        height: 220px;
-        width: 400px;
-        // border: 2px solid blue;
-        border-radius:10px;
-        background-image: url('./images/bg-card-back.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        position: absolute;
-        top: 49%;
-        left: 20%;
-        padding: 15px 15px ;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .cvc-number{
-            position: absolute;
-            // border: 2px solid blue;
-            top: 45%;
-            left: 80%;
-            color: hsl(270, 3%, 87%);
-        }
-
-    }
-}
-#second{
-    flex-basis: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // border: 2px solid red;
-
-    form{
-        // min-height: 378px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        width: 40%;
-        margin: auto;
-        
-        // border: 2px solid blue;
-        > div{
-            height:77.8px;
-        }
-        label{
-            font-size: 12px;
-            text-transform: uppercase;
-            // border: 2px solid blue;
-        }
-        input{
-            margin-top: 5px;
-            // margin-bottom: 18px;
-            width: 100%;
-            // border: 2px solid red;
-            font-size: 16px;
-            padding: 7px 10px;
-            border-radius: 5px;
-            border:1.4px solid rgb(202, 202, 202);
-            outline:none;
-            background: linear-gradient(white, white) padding-box,linear-gradient(to right,hsl(249, 99%, 64%),hsl(278, 94%, 30%));
-        }
-        input::placeholder{
-            color:rgb(182, 182, 182) ;
-            
-        }
-        input:focus{
-            border-color: transparent;
-        }
-        .errorMSG{
-            margin-top: 5px;
-            color: hsl(0, 100%, 66%);
-            font-size:11px;
-            // border:2px solid blue;
-        }
-
-        .together{
-            display: flex;
-            gap: 15px;
-            .expiryDateContainer{
-                flex-basis: 40%;
-                .expiryDateFields{
-                    display: flex;
-                    gap: 5px;
-            }
-        }
-        .cvcContainer{
-            flex-basis: 60%;
-        }
-    }
-    #submit-btn{
-    background: hsl(278, 68%, 11%);
-    color: hsl(270, 3%, 87%);
-    padding: 13px 0;
+#first {
+  flex-basis: 30%;
+  background: url("./images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .card-front {
+    height: 220px;
+    width: 400px;
+    // border: 5px solid blue;
     border-radius: 10px;
-    margin-top: 15px;
-    }
-}
+    background-image: url("./images/bg-card-front.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    padding: 20px 29px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-.thankYou{
+    .card-dets {
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      gap: 15px;
+      // border: 2px solid red;
+      color: hsl(270, 3%, 87%);
+      .card-number {
+        font-size: 25px;
+        letter-spacing: 2.5px;
+        // text-align: center;
+      }
+      .foot {
+        // border: 2px solid yellow;
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .card-back {
+    height: 220px;
+    width: 400px;
+    // border: 2px solid blue;
+    border-radius: 10px;
+    background-image: url("./images/bg-card-back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 49%;
+    left: 20%;
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .cvc-number {
+      position: absolute;
+      // border: 2px solid blue;
+      top: 45%;
+      left: 80%;
+      color: hsl(270, 3%, 87%);
+    }
+  }
+}
+#second {
+  flex-basis: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // border: 2px solid red;
+
+  form {
+    // min-height: 378px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+    margin: auto;
+    // border: 2px solid blue;
+
+    > div {
+      height: 77.8px;
+    }
+    label {
+      font-size: 12px;
+      text-transform: uppercase;
+      // border: 2px solid blue;
+    }
+    input {
+      margin-top: 5px;
+      // margin-bottom: 18px;
+      width: 100%;
+      // border: 2px solid red;
+      font-size: 16px;
+      padding: 7px 10px;
+      border-radius: 5px;
+      border: 1.4px solid rgb(202, 202, 202);
+      outline: none;
+      background: linear-gradient(white, white) padding-box,
+        linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    }
+    input::placeholder {
+      color: rgb(182, 182, 182);
+    }
+    input:focus {
+      border-color: transparent;
+    }
+    .errorMSG {
+      margin-top: 5px;
+      color: hsl(0, 100%, 66%);
+      font-size: 11px;
+      // border:2px solid blue;
+    }
+
+    .together {
+      display: flex;
+      gap: 15px;
+      .expiryDateContainer {
+        flex-basis: 40%;
+        .expiryDateFields {
+          display: flex;
+          gap: 5px;
+        }
+      }
+      .cvcContainer {
+        flex-basis: 60%;
+      }
+    }
+    #submit-btn {
+      background: hsl(278, 68%, 11%);
+      color: hsl(270, 3%, 87%);
+      padding: 13px 0;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+  }
+
+  .thankYou {
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -172,43 +170,45 @@ body{
     // border: 2px solid blue;
     width: 40%;
     gap: 15px;
-    .icon,h1,p{
-        text-align: center;
-        // border:2px solid red;
+    .icon,
+    h1,
+    p {
+      text-align: center;
+      // border:2px solid red;
     }
-    h1{
-        font-size: 2rem;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        margin-top: 15px;
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-top: 15px;
     }
-    p{
-        color: hsl(279, 6%, 55%);
-        letter-spacing: 2px;
+    p {
+      color: hsl(279, 6%, 55%);
+      letter-spacing: 2px;
     }
 
-    #continue-btn{
-        background: hsl(278, 68%, 11%);
-        color: hsl(270, 3%, 87%);
-        padding: 13px 0;
-        border-radius: 10px;
-        margin-top: 15px;
-        width: 100%;
-        margin-top: 30px;
-        }
-}
+    #continue-btn {
+      background: hsl(278, 68%, 11%);
+      color: hsl(270, 3%, 87%);
+      padding: 13px 0;
+      border-radius: 10px;
+      margin-top: 15px;
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
 }
 
-@media(max-width:400px) {
-    .main{
-        // min-height: 100vh;
-        // // border: 2px solid blue;
-        // display:flex;
-        flex-direction: column;
-    }
-    #first{
-        // flex-basis: 30%;
-        background: url('./images/bg-main-mobile.png');
-    }
+@media (max-width: 400px) {
+  .main {
+    // min-height: 100vh;
+    // display:flex;
+    flex-direction: column;
+  }
+  #first {
+    width: 100%;
+    border: 2px solid blue;
+    background: url("./images/bg-main-mobile.png");
+  }
 }

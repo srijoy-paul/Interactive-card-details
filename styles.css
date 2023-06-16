@@ -143,7 +143,9 @@
   width: 40%;
   gap: 15px;
 }
-#second .thankYou .icon, #second .thankYou h1, #second .thankYou p {
+#second .thankYou .icon,
+#second .thankYou h1,
+#second .thankYou p {
   text-align: center;
 }
 #second .thankYou h1 {
@@ -172,6 +174,8 @@
     flex-direction: column;
   }
   #first {
+    width: 100%;
+    border: 2px solid blue;
     background: url("./images/bg-main-mobile.png");
   }
 }

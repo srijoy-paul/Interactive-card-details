@@ -35,10 +35,9 @@ console.log(inputFields[0].value == "");
 
 document.getElementById("submit-btn").addEventListener("click", (e) => {
   e.preventDefault();
+  isError = 5
   // console.log(e);
   for (i = 0; i <= inputFields.length - 2; i++) {
-    isError = false;
-    // console.log(i);
     if (inputFields[i].value === "") {
       console.log(inputFields[i]);
       if (i == 2 || i == 3) {
@@ -48,7 +47,7 @@ document.getElementById("submit-btn").addEventListener("click", (e) => {
         errorMSG.setAttribute("class", "errorMSG");
         document.getElementsByClassName("expiryDateFields")[0].after(errorMSG);
         inputFields[i].style.border = "2px solid hsl(0, 100%, 66%)";
-        isError = true;
+        isError--;
         continue;
       }
 
@@ -57,7 +56,7 @@ document.getElementById("submit-btn").addEventListener("click", (e) => {
       errorMSG.setAttribute("class", "errorMSG");
       inputFields[i].after(errorMSG);
       inputFields[i].style.border = "2px solid hsl(0, 100%, 66%)";
-      isError = true;
+      isError--;
     }
 
     else if (i != 0) {
@@ -69,6 +68,7 @@ document.getElementById("submit-btn").addEventListener("click", (e) => {
           if (i == 2 || i == 3) {
             if (i == 2) entered2 = true;
             if (i == 3 && entered2 == true) {
+              isError--;
               continue;
             }
 
@@ -76,32 +76,34 @@ document.getElementById("submit-btn").addEventListener("click", (e) => {
               .getElementsByClassName("expiryDateFields")[0]
               .after(errorMSG);
             inputFields[i].style.border = "2px solid hsl(0, 100%, 66%)";
+            isError--;
             continue;
           }
           inputFields[i].after(errorMSG);
           inputFields[i].style.border = "2px solid hsl(0, 100%, 66%)";
-          isError = true;
+          isError--;
           // break;
         }
       }
     }
 
-    if (isError === false) {
-      setTimeout(() => {
-        document.querySelector("form").style.display = "none";
-        document.getElementsByClassName("thankYou")[0].style.display = "flex";
-        document.getElementsByClassName("card-number")[0].textContent = document.getElementById("cardNumber").value;
-        document.getElementsByClassName("name")[0].textContent = document.getElementById("cardHolder").value;
-        document.getElementsByClassName("month")[0].textContent = document.getElementById("expiryDate").value;
-        document.getElementsByClassName("year")[0].textContent = document.getElementById("expiryYear").value;
-        document.getElementsByClassName("cvc-number")[0].textContent = document.getElementById("cvcNumber").value;
-      }, 3000);
-    }
 
+  }
+  if (isError === 5) {
+    setTimeout(() => {
+      document.querySelector("form").style.display = "none";
+      document.getElementsByClassName("thankYou")[0].style.display = "flex";
+      document.getElementsByClassName("card-number")[0].textContent = document.getElementById("cardNumber").value;
+      document.getElementsByClassName("name")[0].textContent = document.getElementById("cardHolder").value;
+      document.getElementsByClassName("month")[0].textContent = document.getElementById("expiryDate").value;
+      document.getElementsByClassName("year")[0].textContent = document.getElementById("expiryYear").value;
+      document.getElementsByClassName("cvc-number")[0].textContent = document.getElementById("cvcNumber").value;
+    }, 3000);
   }
 });
 
-document.getElementById("continue-btn").addEventListener("click", () => {
+document.getElementById("continue-btn").addEventListener("click", (e) => {
+  // e.preventDefault();
   document.querySelector("form").style.display = "flex";
   document.getElementsByClassName("thankYou")[0].style.display = "none";
   // document.getElementById("cardNumber").value = "";
@@ -110,11 +112,11 @@ document.getElementById("continue-btn").addEventListener("click", () => {
   // document.getElementById("expiryYear").value = "";
   // document.getElementById("cvcNumber").value = "";
 
-  document.getElementsByClassName("card-number")[0].textContent = document.getElementById("cardNumber").value = "";
-  document.getElementsByClassName("name")[0].textContent = document.getElementById("cardHolder").value = "";
-  document.getElementsByClassName("month")[0].textContent = document.getElementById("expiryDate").value = "";
-  document.getElementsByClassName("year")[0].textContent = document.getElementById("expiryYear").value = "";
-  document.getElementsByClassName("cvc-number")[0].textContent = document.getElementById("cvcNumber").value = "";
+  // document.getElementsByClassName("card-number")[0].textContent = document.getElementById("cardNumber").value = "";
+  // document.getElementsByClassName("name")[0].textContent = document.getElementById("cardHolder").value = "";
+  // document.getElementsByClassName("month")[0].textContent = document.getElementById("expiryDate").value = "";
+  // document.getElementsByClassName("year")[0].textContent = document.getElementById("expiryYear").value = "";
+  // document.getElementsByClassName("cvc-number")[0].textContent = document.getElementById("cvcNumber").value = "";
 })
 
 document.getElementById("cardHolder").addEventListener("keyup", (e) => {
